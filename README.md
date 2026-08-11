@@ -10,14 +10,9 @@
 
 ---
 
-## 🏨 About Metro Club Resort
+## 🏨 About the Project
 
-**Metro Club Resort** is a luxury getaway destination located in Sultanpet, Coimbatore, Tamil Nadu, India. The resort offers premium accommodation, swimming pool, multi-sport turf, banquet facilities, and curated guest experiences for families, couples, and corporate groups.
-
-📍 1/47 Puliyamarathupalayam, Varapatti, Sultanpet, Coimbatore – 641658  
-📞 [+91 90430 01799](tel:+919043001799)  
-💬 [WhatsApp Bookings](https://wa.me/919043001799)  
-🌐 [metroclubresort.in](https://metroclubresort.in)
+**Metro Club Resort** website is a modern digital experience for a countryside getaway resort in Coimbatore, Tamil Nadu. The platform showcases accommodations, amenities, photo galleries, guest testimonials, and direct WhatsApp reservation flows.
 
 ---
 
@@ -108,15 +103,13 @@ npm run build
 
 ## 📞 WhatsApp Booking Integration
 
-All "Book Now" buttons construct pre-filled WhatsApp messages via:
+All "Book Now" buttons dynamically construct pre-filled WhatsApp messages via `src/lib/whatsapp.ts`:
 
 ```typescript
 import { createWhatsAppUrl } from "@/lib/whatsapp";
 
-const url = createWhatsAppUrl("Hello! I'd like to book the Deluxe Double Room...");
+const url = createWhatsAppUrl("Hello! I'd like to make an enquiry...");
 ```
-
-WhatsApp Number: `919043001799`
 
 ---
 
@@ -127,7 +120,7 @@ WhatsApp Number: `919043001799`
 1. Push to GitHub
 2. Import repository on [vercel.com](https://vercel.com)
 3. Auto-detect Next.js — click Deploy
-4. Add custom domain `metroclubresort.in` in project settings
+4. Add your custom domain in project settings
 
 ### Other Platforms
 
@@ -137,4 +130,4 @@ Standard Next.js — deployable to Vercel, AWS Amplify, Netlify, Hostinger, or a
 
 ## 📄 License
 
-Private project — Metro Club Resort. All rights reserved.
+Private project. All rights reserved.
