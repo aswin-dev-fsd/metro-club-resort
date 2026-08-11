@@ -24,14 +24,16 @@ export function RoomCard({ room }: RoomCardProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
 
         {/* Pricing Badge */}
-        <div className="absolute top-4 right-4 bg-[#1B4332]/90 backdrop-blur-sm text-white px-3 py-1.5 rounded-lg border border-[#D48C00]/30 shadow-md">
-          <span className="text-xs font-sans text-[#D48C00] uppercase tracking-wider block text-[10px]">
+        <div className="absolute top-4 right-4 bg-[#1B4332]/90 backdrop-blur-sm text-white px-3 py-1.5 rounded-lg border border-[#D48C00]/30 shadow-md text-right">
+          <span className="text-[10px] font-sans text-[#D48C00] uppercase tracking-wider block leading-tight">
             Starting from
           </span>
-          <span className="text-base font-serif font-bold text-white">
-            ₹{room.pricePerNight.toLocaleString("en-IN")}
-          </span>
-          <span className="text-[11px] text-neutral-300 ml-1">/ night</span>
+          <div className="flex items-baseline gap-0.5 justify-end">
+            <span className="text-sm font-sans font-bold text-white leading-none">
+              &#x20B9;{room.pricePerNight.toLocaleString("en-IN")}
+            </span>
+            <span className="text-[10px] text-neutral-300 leading-none">/ night</span>
+          </div>
         </div>
 
         {/* Category / Occupancy Pill */}

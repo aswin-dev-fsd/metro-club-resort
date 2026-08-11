@@ -109,7 +109,7 @@ export function Footer() {
                     className="hover:text-[#D48C00] transition-colors flex items-center justify-between"
                   >
                     <span>{room.name}</span>
-                    <span className="text-xs text-[#D48C00] font-semibold">₹{room.pricePerNight}</span>
+                    <span className="text-xs text-[#D48C00] font-semibold">&#x20B9;{room.pricePerNight.toLocaleString("en-IN")}</span>
                   </Link>
                 </li>
               ))}

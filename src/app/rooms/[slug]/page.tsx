@@ -95,13 +95,15 @@ export default async function RoomDetailPage({ params }: RoomDetailPageProps) {
 
           <div className="bg-[#1B4332] text-white p-4 rounded-2xl flex items-center space-x-4 shadow-md shrink-0">
             <div>
-              <span className="text-xs uppercase tracking-wider text-[#D48C00] font-semibold block">
+              <span className="text-xs uppercase tracking-wider text-[#D48C00] font-semibold block leading-tight">
                 Official Price
               </span>
-              <span className="text-2xl sm:text-3xl font-serif font-bold">
-                ₹{room.pricePerNight.toLocaleString("en-IN")}
-              </span>
-              <span className="text-xs text-neutral-300 ml-1">/ night</span>
+              <div className="flex items-baseline gap-1">
+                <span className="text-2xl sm:text-3xl font-sans font-bold leading-none">
+                  &#x20B9;{room.pricePerNight.toLocaleString("en-IN")}
+                </span>
+                <span className="text-xs text-neutral-300 leading-none">/ night</span>
+              </div>
             </div>
             <a
               href={createWhatsAppUrl(room.whatsappMessage)}
@@ -216,7 +218,7 @@ export default async function RoomDetailPage({ params }: RoomDetailPageProps) {
               <div className="bg-white/10 rounded-2xl p-4 mb-6 space-y-2 text-xs text-neutral-200">
                 <div className="flex justify-between">
                   <span>Room Rate:</span>
-                  <span className="font-bold text-[#D48C00]">₹{room.pricePerNight.toLocaleString("en-IN")} / night</span>
+                  <span className="font-bold text-[#D48C00]">&#x20B9;{room.pricePerNight.toLocaleString("en-IN")} / night</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Breakfast:</span>
@@ -265,7 +267,7 @@ export default async function RoomDetailPage({ params }: RoomDetailPageProps) {
                 </div>
                 <div>
                   <h3 className="text-lg font-serif font-bold text-[#1B4332]">{r.name}</h3>
-                  <p className="text-xs text-[#D48C00] font-semibold mb-3">₹{r.pricePerNight} / night</p>
+                  <p className="text-xs text-[#D48C00] font-semibold mb-3">&#x20B9;{r.pricePerNight.toLocaleString("en-IN")} / night</p>
                   <Link
                     href={`/rooms/${r.slug}`}
                     className="block text-xs font-bold uppercase tracking-wider text-center bg-[#F4F1EA] hover:bg-[#E8E3D9] text-[#1B4332] py-2 rounded-lg transition-colors"
