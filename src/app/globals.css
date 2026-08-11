@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --forest-green: #1B4332;
+    --forest-green-dark: #112d22;
+    --forest-green-light: #2d5e49;
+    
+    --campfire-gold: #D48C00;
+    --campfire-gold-hover: #b87900;
+    --campfire-gold-light: #fef3d6;
+    
+    --pool-teal: #0077B6;
+    --pool-teal-hover: #005b8c;
+    --pool-teal-light: #e0f4fc;
+    
+    --clean-slate: #2D312E;
+    --clean-slate-muted: #5e6660;
+    --clean-slate-light: #8a948c;
+    
+    --soft-cream: #FCFBFA;
+    --soft-cream-alt: #F4F1EA;
+    --soft-cream-border: #E8E3D9;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--soft-cream);
+    color: var(--clean-slate);
+  }
+
+  body {
+    background-color: var(--soft-cream);
+    color: var(--clean-slate);
+    font-family: -apple-system, BlinkMacSystemFont, "Liberation Sans", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Liberation Serif", Georgia, Cambria, "Times New Roman", Times, serif;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+  }
+
+  .subheading-tag {
+    font-family: -apple-system, BlinkMacSystemFont, "Liberation Sans", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+    color: var(--campfire-gold);
+  }
+}
+
+/* Custom Utilities for Resort Brand System */
+.bg-forest { background-color: var(--forest-green); }
+.bg-forest-dark { background-color: var(--forest-green-dark); }
+.bg-forest-light { background-color: var(--forest-green-light); }
+.text-forest { color: var(--forest-green); }
+.border-forest { border-color: var(--forest-green); }
+
+.bg-gold { background-color: var(--campfire-gold); }
+.hover\:bg-gold-hover:hover { background-color: var(--campfire-gold-hover); }
+.bg-gold-light { background-color: var(--campfire-gold-light); }
+.text-gold { color: var(--campfire-gold); }
+.border-gold { border-color: var(--campfire-gold); }
+
+.bg-teal-brand { background-color: var(--pool-teal); }
+.hover\:bg-teal-brand-hover:hover { background-color: var(--pool-teal-hover); }
+.bg-teal-light { background-color: var(--pool-teal-light); }
+.text-teal-brand { color: var(--pool-teal); }
+.border-teal-brand { border-color: var(--pool-teal); }
+
+.bg-cream { background-color: var(--soft-cream); }
+.bg-cream-alt { background-color: var(--soft-cream-alt); }
+.border-cream-border { border-color: var(--soft-cream-border); }
+
+.text-slate-brand { color: var(--clean-slate); }
+.text-slate-muted { color: var(--clean-slate-muted); }
