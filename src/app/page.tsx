@@ -83,14 +83,6 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden md:flex flex-col items-center text-white/70">
-          <span className="text-[10px] uppercase tracking-[0.2em] mb-1 font-sans">Scroll to Discover</span>
-          <div className="w-5 h-9 border-2 border-white/30 rounded-full flex justify-center p-1">
-            <div className="w-1.5 h-2 bg-[#D48C00] rounded-full animate-bounce" />
-          </div>
-        </div>
       </section>
 
       {/* 2. QUICK FEATURE BANNERS */}
