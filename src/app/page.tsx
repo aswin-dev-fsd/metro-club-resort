@@ -50,7 +50,7 @@ export default function HomePage() {
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 pb-16">
           <div className="inline-flex items-center space-x-2 bg-[#D48C00]/20 border border-[#D48C00]/40 text-[#D48C00] px-4 py-1.5 rounded-full text-xs md:text-sm font-sans font-bold uppercase tracking-[0.2em] mb-6 backdrop-blur-md">
             <Sparkles className="w-4 h-4 text-[#D48C00]" />
-            <span>Welcome to Coimbatore’s Premier Staycation</span>
+            <span>A Perfect Retreat for Family & Friends</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white tracking-tight leading-[1.1] mb-6">
