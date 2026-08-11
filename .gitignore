@@ -20,7 +20,8 @@
 # production
 /build
 
-# scratch, tools & temporary files
+# agent workspace config & scratch files
+.agents/
 temp/
 *.tmp
 *.log
