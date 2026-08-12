@@ -57,25 +57,35 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Col 2: Navigation Links */}
+          {/* Col 2: Experiences */}
           <div>
             <h3 className="text-sm font-sans font-bold uppercase tracking-[0.12em] text-[#D48C00] mb-4">
-              Quick Explore
+              Experiences
             </h3>
             <ul className="space-y-2.5 text-sm text-neutral-300">
               <li>
-                <Link href="/" className="hover:text-[#D48C00] transition-colors">
-                  Home Sanctuary
+                <Link href="/banquet-hall" className="hover:text-[#D48C00] transition-colors">
+                  AC Banquet Hall
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-[#D48C00] transition-colors">
-                  About Our Resort
+                <Link href="/outdoor-lawn" className="hover:text-[#D48C00] transition-colors">
+                  Outdoor Event Lawn
                 </Link>
               </li>
               <li>
-                <Link href="/rooms" className="hover:text-[#D48C00] transition-colors">
-                  Luxury Rooms & Pricing
+                <Link href="/corporate" className="hover:text-[#D48C00] transition-colors">
+                  Corporate Day Out & Stay
+                </Link>
+              </li>
+              <li>
+                <Link href="/day-out-packages" className="hover:text-[#D48C00] transition-colors">
+                  Day Out Packages
+                </Link>
+              </li>
+              <li>
+                <Link href="/celebrations" className="hover:text-[#D48C00] transition-colors">
+                  Occasions & Celebrations
                 </Link>
               </li>
               <li>
@@ -88,31 +98,50 @@ export function Footer() {
                   Photo & Activity Gallery
                 </Link>
               </li>
+            </ul>
+          </div>
+
+          {/* Col 3: Explore & Guest Info */}
+          <div>
+            <h3 className="text-sm font-sans font-bold uppercase tracking-[0.12em] text-[#D48C00] mb-4">
+              Explore & Guest Info
+            </h3>
+            <ul className="space-y-2.5 text-sm text-neutral-300">
+              <li>
+                <Link href="/rooms" className="hover:text-[#D48C00] transition-colors">
+                  Rooms & Suites Pricing
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="hover:text-[#D48C00] transition-colors">
+                  About Our Resort
+                </Link>
+              </li>
+              <li>
+                <Link href="/testimonials" className="hover:text-[#D48C00] transition-colors">
+                  Guest Reviews
+                </Link>
+              </li>
+              <li>
+                <Link href="/faqs" className="hover:text-[#D48C00] transition-colors">
+                  Frequently Asked FAQs
+                </Link>
+              </li>
+              <li>
+                <Link href="/weather" className="hover:text-[#D48C00] transition-colors">
+                  Local Weather Forecast
+                </Link>
+              </li>
+              <li>
+                <Link href="/nearby-attractions" className="hover:text-[#D48C00] transition-colors">
+                  Nearby Attractions
+                </Link>
+              </li>
               <li>
                 <Link href="/contact" className="hover:text-[#D48C00] transition-colors">
                   Contact & Location
                 </Link>
               </li>
-            </ul>
-          </div>
-
-          {/* Col 3: Accommodations */}
-          <div>
-            <h3 className="text-sm font-sans font-bold uppercase tracking-[0.12em] text-[#D48C00] mb-4">
-              Accommodations
-            </h3>
-            <ul className="space-y-2.5 text-sm text-neutral-300">
-              {roomsData.map((room) => (
-                <li key={room.id}>
-                  <Link
-                    href={`/rooms/${room.slug}`}
-                    className="hover:text-[#D48C00] transition-colors flex items-center justify-between"
-                  >
-                    <span>{room.name}</span>
-                    <span className="text-xs text-[#D48C00] font-semibold">&#x20B9;{room.pricePerNight.toLocaleString("en-IN")}</span>
-                  </Link>
-                </li>
-              ))}
             </ul>
           </div>
 
