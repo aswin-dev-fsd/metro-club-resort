@@ -52,20 +52,23 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="group flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-full bg-[#D48C00] flex items-center justify-center text-[#1B4332] font-serif font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
-              M
-            </div>
-            <div>
-              <span className="block text-xl md:text-2xl font-serif font-bold tracking-tight text-white group-hover:text-[#D48C00] transition-colors">
-                METRO CLUB
-              </span>
-              <span className="block text-[10px] tracking-[0.25em] uppercase text-[#D48C00] font-sans font-semibold">
-                Resort • Coimbatore
-              </span>
-            </div>
-          </Link>
+           {/* Logo */}
+           <Link href="/" className="group flex items-center space-x-3">
+             {/* Double-ring gold emblem seal */}
+             <div className="flex items-center justify-center w-11 h-11 rounded-full border border-[#D48C00]/40 transition-transform duration-300 group-hover:scale-105">
+               <div className="w-8 h-8 rounded-full bg-[#D48C00] flex items-center justify-center text-[#1B4332] font-serif font-bold text-lg shadow-sm">
+                 M
+               </div>
+             </div>
+             <div>
+               <span className="block text-xl md:text-2xl font-serif font-bold tracking-tight text-white group-hover:text-[#D48C00] transition-colors">
+                 METRO CLUB
+               </span>
+               <span className="block text-[9px] tracking-[0.4em] uppercase text-[#D48C00] font-sans font-bold mt-0.5">
+                 Resort
+               </span>
+             </div>
+           </Link>
  
           {/* Desktop Navigation Links */}
           <nav className="hidden lg:flex items-center space-x-5 xl:space-x-8">
@@ -75,7 +78,7 @@ export function Navbar() {
                 return (
                   <div key={link.label} className="relative group py-1">
                     <button
-                      className={`text-[13px] xl:text-sm font-sans font-medium uppercase tracking-[0.06em] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap ${
+                      className={`text-[12px] xl:text-[13px] font-sans font-medium uppercase tracking-[0.12em] transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap ${
                         isAnySubActive ? "text-[#D48C00]" : "text-white/90 hover:text-[#D48C00]"
                       }`}
                     >
@@ -118,7 +121,7 @@ export function Navbar() {
                  <Link
                    key={link.href}
                    href={link.href}
-                   className={`text-[13px] xl:text-sm font-sans font-medium uppercase tracking-[0.06em] transition-colors relative py-1 whitespace-nowrap ${
+                   className={`text-[12px] xl:text-[13px] font-sans font-medium uppercase tracking-[0.12em] transition-colors relative py-1 whitespace-nowrap ${
                      isActive ? "text-[#D48C00] font-semibold" : "text-white/90 hover:text-[#D48C00]"
                    }`}
                  >
@@ -131,27 +134,42 @@ export function Navbar() {
             })}
           </nav>
  
-          {/* Right Action Buttons */}
-          <div className="hidden sm:flex items-center space-x-3">
-             <a
-               href={`tel:${DISPLAY_PHONE.replace(/\s+/g, "")}`}
-               className="flex items-center space-x-2 text-xs font-sans font-semibold text-white/90 hover:text-white px-3.5 py-2.5 rounded-lg bg-white/10 hover:bg-white/20 transition-colors border border-white/10 whitespace-nowrap"
-             >
-              <Phone className="w-3.5 h-3.5 text-[#D48C00]" />
-              <span className="hidden md:inline">{DISPLAY_PHONE}</span>
-            </a>
- 
-            <a
-              href={createWhatsAppUrl(
-                "Hello Metro Club Resort! I would like to enquire about room bookings and availability."
-              )}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-xs font-sans font-bold uppercase tracking-[0.08em] bg-[#D48C00] hover:bg-[#b87900] text-[#1B4332] px-4 py-2.5 rounded-lg shadow-md hover:shadow-lg transition-all hover:scale-[1.02]"
+          {/* Right Action Dropdown (Combines Call & WhatsApp) */}
+          <div className="hidden sm:block relative group/book z-50">
+            <button
+              className="flex items-center gap-2 text-xs font-sans font-bold uppercase tracking-[0.08em] bg-[#D48C00] hover:bg-[#b87900] text-[#1B4332] px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transition-all hover:scale-[1.02] cursor-pointer"
             >
-              <MessageCircle className="w-4 h-4 fill-current" />
-              <span>Book via WhatsApp</span>
-            </a>
+              <span>Book Now</span>
+              <svg
+                className="h-3 w-3 fill-current mt-0.5 group-hover/book:rotate-180 transition-transform duration-200"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+              </svg>
+            </button>
+            
+            {/* Dropdown Options */}
+            <div className="absolute right-0 top-full pt-2 w-52 hidden group-hover/book:block transition-all duration-300">
+              <div className="rounded-xl bg-[#1B4332] border border-[#D48C00]/30 shadow-2xl py-2 z-50 overflow-hidden">
+                <a
+                  href={createWhatsAppUrl("Hello Metro Club Resort! I would like to enquire about room bookings and availability.")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 px-5 py-3 text-xs font-sans font-bold uppercase tracking-wider text-white/90 hover:text-[#D48C00] hover:bg-white/5 transition-colors border-b border-[#D48C00]/15"
+                >
+                  <MessageCircle className="h-4 w-4 text-[#D48C00] fill-current" />
+                  <span>Book via WhatsApp</span>
+                </a>
+                <a
+                  href={`tel:${DISPLAY_PHONE.replace(/\s+/g, "")}`}
+                  className="flex items-center gap-3 px-5 py-3 text-xs font-sans font-bold uppercase tracking-wider text-white/90 hover:text-[#D48C00] hover:bg-white/5 transition-colors"
+                >
+                  <Phone className="h-4 w-4 text-[#D48C00]" />
+                  <span>Call Front Desk</span>
+                </a>
+              </div>
+            </div>
           </div>
  
           {/* Mobile Menu Button */}
