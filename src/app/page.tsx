@@ -18,6 +18,8 @@ import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { RoomCard } from "@/components/ui/RoomCard";
 import { AmenityCard } from "@/components/ui/AmenityCard";
+import { WeatherPanel } from "@/components/ui/WeatherPanel";
+import { AttractionsGrid } from "@/components/ui/AttractionsGrid";
 import { roomsData } from "@/data/rooms";
 import { amenitiesData } from "@/data/amenities";
 import { resortInfo } from "@/data/resortInfo";
@@ -287,7 +289,40 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. LOCATION & QUICK MAP */}
+      {/* 7. LIVE WEATHER FORECAST */}
+      <section className="py-20 md:py-24 bg-[#FCFBFA]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            tag="Live Climate & Forecast"
+            title="Current Weather at the Resort"
+            description="Check real-time temperatures, breeze, and hourly forecast in Sultanpet, Coimbatore before planning your trip."
+          />
+          <WeatherPanel />
+        </div>
+      </section>
+
+      {/* 8. NEARBY ATTRACTIONS */}
+      <section className="py-20 md:py-24 bg-[#F4F1EA] border-t border-[#E8E3D9]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            tag="Explore the Surroundings"
+            title="Must-Visit Nearby Attractions"
+            description="Scenic dams, serene lakes, historic temples, and wildlife sanctuaries within an easy drive from Metro Club Resort."
+          />
+          <AttractionsGrid />
+          <div className="text-center mt-12">
+            <Link
+              href="/nearby-attractions"
+              className="inline-flex items-center space-x-2 text-sm font-sans font-bold uppercase tracking-[0.1em] bg-[#1B4332] hover:bg-[#112d22] text-white px-8 py-3.5 rounded-xl shadow-md transition-colors"
+            >
+              <span>Explore All Attractions & Drive Times</span>
+              <ArrowRight className="w-4 h-4 text-[#D48C00]" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 9. LOCATION & QUICK MAP */}
       <section className="py-20 bg-[#FCFBFA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-[#F4F1EA] rounded-3xl p-8 md:p-12 border border-[#E8E3D9] grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">

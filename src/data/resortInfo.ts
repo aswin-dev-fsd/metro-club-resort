@@ -3,9 +3,9 @@ export const resortInfo = {
   tagline: "A Perfect Retreat for Family & Friends",
   fullAddress: "1/47 Puliyamarathupalayam, Varapatti, Sultanpet, Coimbatore, Tamil Nadu – 641658, India",
   shortAddress: "Sultanpet, Coimbatore, Tamil Nadu",
-  phoneDisplay: "+91 90430 01799",
-  phoneRaw: "+919043001799",
-  whatsappNumber: "919043001799",
+  phoneDisplay: "+91 90430 01599",
+  phoneRaw: "+919043001599",
+  whatsappNumber: "919043001599",
   email: "info@metroclubresort.in",
   googleMapsLink: "https://maps.google.com/?q=Metro+Club+Resort+Sultanpet+Coimbatore",
   checkInTime: "12:00 PM",
@@ -46,7 +46,7 @@ export const resortInfo = {
     {
       question: "How do I book a room or event at Metro Club Resort?",
       answer:
-        "Booking is easy and direct! Simply click any 'Book Now' button on our website to chat directly with our front desk on WhatsApp (+91 90430 01799) with your chosen room details and dates.",
+        "Booking is easy and direct! Simply click any 'Book Now' button on our website to chat directly with our front desk on WhatsApp (+91 90430 01599) with your chosen room details and dates.",
     },
     {
       question: "Is Metro Club Resort suitable for family and corporate gatherings?",

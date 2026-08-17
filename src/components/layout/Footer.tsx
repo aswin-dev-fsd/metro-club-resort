@@ -170,7 +170,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-[#D48C00] transition-colors"
                 >
-                  WhatsApp: +91 90430 01799
+                  WhatsApp: {resortInfo.phoneDisplay}
                 </a>
               </li>
             </ul>
