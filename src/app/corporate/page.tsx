@@ -11,7 +11,7 @@ import { CORPORATE_DAY_OUT, CORPORATE_STAY, IMAGES } from "@/data/packages";
 export const metadata: Metadata = {
   title: "Corporate Day Out & Offsite Resort Near Coimbatore | Metro Club Resort",
   description:
-    "Corporate day out and corporate stay packages near Coimbatore — team building, conference setup, projector and sound, buffet meals, turf, pool, and rain dance.",
+    "Corporate day out and corporate stay packages near Coimbatore — team building, conference setup, sound system, buffet meals, turf, swimming pool with music, and rain dance.",
 };
 
 interface PackageProps {

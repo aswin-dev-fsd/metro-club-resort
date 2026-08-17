@@ -10,7 +10,7 @@ import { DAY_OUT_PACKAGES, IMAGES } from "@/data/packages";
 export const metadata: Metadata = {
   title: "Day Out Packages Near Coimbatore | Family, Corporate & College | Metro Club Resort",
   description:
-    "Day out packages near Coimbatore with buffet lunch, swimming pool, rain dance, indoor and outdoor games, and evening hi-tea — for families, teams, schools, and friends.",
+    "Day out packages near Coimbatore with buffet lunch, swimming pool with music, rain dance with music, indoor games, turf, and evening hi-tea — for families, teams, schools, and friends.",
 };
 
 export default function DayOutPackagesPage() {
@@ -40,14 +40,22 @@ export default function DayOutPackagesPage() {
                   <p className="mt-1 text-[10px] font-sans font-bold uppercase tracking-wider text-[#D48C00]">
                     {pkg.subtitle}
                   </p>
-                  <ul className="mt-5 space-y-2 pt-4 border-t border-[#E8E3D9]/60">
-                    {pkg.inclusions.map((inclusion) => (
-                      <li key={inclusion} className="flex items-center gap-2 text-xs sm:text-sm text-[#2D312E] font-sans">
-                        <Check className="h-4 w-4 shrink-0 text-[#D48C00]" />
-                        <span>{inclusion}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  {pkg.description ? (
+                    <div className="mt-5 pt-4 border-t border-[#E8E3D9]/60">
+                      <p className="text-xs sm:text-sm text-[#5e6660] font-sans leading-relaxed">
+                        {pkg.description}
+                      </p>
+                    </div>
+                  ) : (
+                    <ul className="mt-5 space-y-2 pt-4 border-t border-[#E8E3D9]/60">
+                      {pkg.inclusions?.map((inclusion) => (
+                        <li key={inclusion} className="flex items-center gap-2 text-xs sm:text-sm text-[#2D312E] font-sans">
+                          <Check className="h-4 w-4 shrink-0 text-[#D48C00]" />
+                          <span>{inclusion}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </div>
             </article>

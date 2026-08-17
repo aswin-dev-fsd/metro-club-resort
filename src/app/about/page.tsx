@@ -2,7 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
-import { Sparkles, Star, Users, Coffee, Bed, ArrowRight, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
+import { Sparkles, Star, Users, Coffee, Bed, ArrowRight, Phone, CheckCircle2 } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { resortInfo } from "@/data/resortInfo";
 import { createWhatsAppUrl } from "@/lib/whatsapp";
@@ -79,7 +80,7 @@ export default function AboutPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 text-sm font-sans font-bold uppercase tracking-[0.08em] bg-[#D48C00] hover:bg-[#b87900] text-[#1B4332] px-6 py-3 rounded-xl shadow-md transition-all"
               >
-                <MessageCircle className="w-4 h-4 fill-current" />
+                <WhatsAppIcon className="w-4 h-4 fill-current" />
                 <span>Book Direct on WhatsApp</span>
               </a>
             </div>

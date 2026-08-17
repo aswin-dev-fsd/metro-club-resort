@@ -3,7 +3,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { galleryData } from "@/data/gallery";
-import { Sparkles, MessageCircle } from "lucide-react";
+import { Sparkles } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { createWhatsAppUrl } from "@/lib/whatsapp";
 
 export default function GalleryPage() {
@@ -93,7 +94,7 @@ export default function GalleryPage() {
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 text-xs font-sans font-bold uppercase tracking-[0.1em] bg-[#D48C00] hover:bg-[#b87900] text-[#1B4332] px-6 py-3 rounded-xl shadow transition-all"
           >
-            <MessageCircle className="w-4 h-4 fill-current" />
+            <WhatsAppIcon className="w-4 h-4 fill-current" />
             <span>Chat with Front Desk</span>
           </a>
         </div>

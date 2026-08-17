@@ -11,7 +11,7 @@ export const resortFaqs: FaqGroup[] = [
     items: [
       {
         q: "What rooms are available at Metro Club Resort?",
-        a: "We offer the Standard Room, Deluxe Double Room, Double Room with Balcony, and the Suite with Pool View. We also have King Rooms with Pool View, Balcony Rooms with Pool View, and Deluxe Rooms with Farm View — each equipped with air conditioning, a flat-screen TV, a private bathroom, and a dedicated workspace.",
+        a: "We offer the Standard Room, Deluxe Room, Deluxe Room with Balcony, and the Master Room with Pool View. We also have King Rooms with Pool View, Balcony Rooms with Pool View, and Deluxe Rooms with Farm View — each equipped with air conditioning, a flat-screen TV, a private bathroom, and a dedicated workspace.",
       },
       {
         q: "What are the check-in and check-out times?",

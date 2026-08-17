@@ -68,9 +68,9 @@ export const galleryData: GalleryItem[] = [
   },
   {
     id: "g-11",
-    title: "Modern Fitness Gym",
+    title: "Indoor Games & Activities",
     category: "Activities",
-    image: "https://metroclubresort.in/wp-content/uploads/elementor/thumbs/5-1-rjmizwxy5mqqophahlto01cxjzukbebt0yphv4w03s.jpg",
+    image: "https://metroclubresort.in/wp-content/uploads/2025/05/10.jpg",
   },
   {
     id: "g-12",

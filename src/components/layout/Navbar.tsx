@@ -3,7 +3,8 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Phone, MessageCircle, Menu, X } from "lucide-react";
+import { Phone, Menu, X } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { createWhatsAppUrl, DISPLAY_PHONE } from "@/lib/whatsapp";
 
 export function Navbar() {
@@ -158,7 +159,7 @@ export function Navbar() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 px-5 py-3 text-xs font-sans font-bold uppercase tracking-wider text-white/90 hover:text-[#D48C00] hover:bg-white/5 transition-colors border-b border-[#D48C00]/15"
                 >
-                  <MessageCircle className="h-4 w-4 text-[#D48C00] fill-current" />
+                  <WhatsAppIcon className="h-4 w-4 text-[#D48C00] fill-current" />
                   <span>Book via WhatsApp</span>
                 </a>
                 <a
@@ -254,7 +255,7 @@ export function Navbar() {
               rel="noopener noreferrer"
               className="flex items-center justify-center space-x-2 w-full py-3 text-sm font-bold uppercase tracking-[0.08em] bg-[#D48C00] text-[#1B4332] rounded-lg shadow-md"
             >
-              <MessageCircle className="w-4 h-4 fill-current" />
+              <WhatsAppIcon className="w-4 h-4 fill-current" />
               <span>Book via WhatsApp</span>
             </a>
           </div>

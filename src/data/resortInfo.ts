@@ -33,7 +33,7 @@ export const resortInfo = {
     quote:
       "I had a very good time and experience at Metro Club Resort. Everything was really good, and the service was awesome. Especially Suresh who guided us gave a very good behaved and service well. Best place for Happy Weekend.",
     author: "Dhiwakar Kumar",
-    source: "Verified TripAdvisor Guest Review",
+    source: "Verified Google Guest Review",
     rating: 5,
   },
 

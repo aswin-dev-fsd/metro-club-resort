@@ -50,13 +50,24 @@ export const amenitiesData: Amenity[] = [
     highlight: true,
   },
   {
-    id: "gym",
-    name: "Fitness Gym",
-    category: "Wellness",
-    tagline: "Stay energized with cardio and strength equipment",
+    id: "indoor-activities",
+    name: "Indoor Games & Activities",
+    category: "Recreation",
+    tagline: "Table tennis, carrom, chess & board games for all ages",
     description:
-      "Stay energized and on track with your fitness goals in our modern gym, equipped for all levels—perfect for guests seeking a healthy balance during their tranquil retreat.",
-    image: "https://metroclubresort.in/wp-content/uploads/elementor/thumbs/5-1-rjmizwxy5mqqophahlto01cxjzukbebt0yphv4w03s.jpg",
+      "Enjoy a lively selection of indoor games including table tennis, carrom, chess, board games, and group recreation—perfect for unwinding with friends and family during warm afternoons.",
+    image: "https://metroclubresort.in/wp-content/uploads/2025/05/10.jpg",
+    highlight: true,
+  },
+  {
+    id: "conference-room",
+    name: "Conference & Meeting Hall",
+    category: "Event & Leisure",
+    tagline: "Equipped setup for corporate meetings, workshops & presentations",
+    description:
+      "Host seamless business conferences, corporate retreats, team strategy sessions, and workshops with dedicated projector, audio-visual system, high-speed Wi-Fi, and customizable executive seating.",
+    image: "https://metroclubresort.in/wp-content/uploads/2025/05/about-2.jpg",
+    highlight: true,
   },
   {
     id: "outdoor-lawn",

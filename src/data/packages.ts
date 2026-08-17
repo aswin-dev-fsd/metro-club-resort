@@ -14,18 +14,16 @@ export const CORPORATE_DAY_OUT = [
   "Team Building Activities",
   "Breakfast (Optional)",
   "Lunch Buffet",
-  "Swimming Pool",
-  "Rain Dance",
+  "Swimming Pool with Music",
+  "Rain Dance with Music",
   "Indoor Games",
-  "Outdoor Games",
-  "Cricket Turf",
+  "Horse Cart Ride",
+  "Turf",
   "Conference Setup",
-  "Projector",
   "Sound System",
   "Evening Hi-Tea",
   "Group Activities",
   "Employee Engagement",
-  "Photography",
   "Parking",
   "Professional Event Support",
 ];
@@ -39,29 +37,28 @@ export const CORPORATE_STAY = [
   "Meeting Setup",
   "Team Activities",
   "Campfire",
-  "Networking Dinner",
   "Morning Tea",
-  "Swimming Pool",
-  "Rain Dance",
+  "Swimming Pool with Music",
+  "Rain Dance with Music",
   "Indoor Games",
-  "Outdoor Games",
-  "Late Checkout (Optional)",
+  "Horse Cart Ride",
+  "Late Checkout (Subject to Availability)",
 ];
 
 export type DayOutPackage = {
   name: string;
   subtitle: string;
   image: string;
-  inclusions: string[];
+  inclusions?: string[];
+  description?: string;
 };
 
 const BASE_INCLUSIONS = [
   "Welcome Drink",
   "Buffet Lunch",
-  "Swimming Pool",
+  "Swimming Pool with Music",
   "Rain Dance with Music",
   "Indoor Games",
-  "Outdoor Games",
   "Evening Hi-Tea",
   "Free Parking",
 ];
@@ -77,13 +74,13 @@ export const DAY_OUT_PACKAGES: DayOutPackage[] = [
     name: "Corporate Day Out",
     subtitle: "Team building, minus the awkwardness",
     image: IMAGES.turf,
-    inclusions: [...BASE_INCLUSIONS, "Team Building Activities", "Conference Setup", "Cricket Turf"],
+    inclusions: [...BASE_INCLUSIONS, "Team Building Activities", "Conference Setup", "Turf"],
   },
   {
     name: "Friends Package",
     subtitle: "Turf in the morning, campfire at night",
     image: IMAGES.campfire,
-    inclusions: [...BASE_INCLUSIONS, "Cricket Turf", "Music & DJ", "Campfire (add-on)"],
+    inclusions: [...BASE_INCLUSIONS, "Turf", "Music & DJ", "Campfire (add-on)"],
   },
   {
     name: "School Package",
@@ -95,21 +92,14 @@ export const DAY_OUT_PACKAGES: DayOutPackage[] = [
     name: "College Package",
     subtitle: "Big groups, big day",
     image: IMAGES.rainDance,
-    inclusions: [...BASE_INCLUSIONS, "DJ & Sound", "Cricket Turf", "Group Photography"],
+    inclusions: [...BASE_INCLUSIONS, "DJ & Sound", "Turf"],
   },
   {
-    name: "Couple Package",
-    subtitle: "A quiet day for two",
+    name: "Photoshoot Package",
+    subtitle: "Pre-wedding, fashion & portfolio shoots",
     image: IMAGES.restaurant,
-    inclusions: [
-      "Welcome Drink",
-      "Private Lunch Setup",
-      "Swimming Pool",
-      "Rain Dance with Music",
-      "Garden & Nature Walk",
-      "Evening Hi-Tea",
-      "Free Parking",
-    ],
+    description:
+      "A picturesque countryside destination for pre-wedding, post-wedding, fashion, and portfolio photoshoots. Enjoy full access to scenic lush green lawns, swimming pool backdrops, rustic aesthetic zones, and private changing rooms for a smooth, creative shoot day.",
   },
 ];
 

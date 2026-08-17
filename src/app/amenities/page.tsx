@@ -2,13 +2,14 @@ import React from "react";
 import { Metadata } from "next";
 import { AmenityCard } from "@/components/ui/AmenityCard";
 import { amenitiesData } from "@/data/amenities";
-import { MessageCircle, Phone, Sparkles } from "lucide-react";
+import { Phone, Sparkles } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { createWhatsAppUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
   title: "Amenities & Activities | Sports Turf, Pool & Events",
   description:
-    "Discover all 10 amenities at Metro Club Resort Coimbatore: Swimming Pool, Sports Turf Arena, Rain Dance, Camp Fire, Banquet Hall, Gym, and Restaurant.",
+    "Discover amenities at Metro Club Resort Coimbatore: Swimming Pool, Sports Turf Arena, Rain Dance, Camp Fire, Banquet Hall, Indoor Games, Conference Hall, and Restaurant.",
 };
 
 export default function AmenitiesPage() {
@@ -58,7 +59,7 @@ export default function AmenitiesPage() {
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 text-sm font-sans font-bold uppercase tracking-[0.1em] bg-[#D48C00] hover:bg-[#b87900] text-[#1B4332] px-8 py-4 rounded-xl shadow-lg transition-all"
           >
-            <MessageCircle className="w-5 h-5 fill-current" />
+            <WhatsAppIcon className="w-5 h-5 fill-current" />
             <span>Enquire for Day Outings & Events</span>
           </a>
         </div>

@@ -8,7 +8,7 @@ import { testimonialsData } from "@/data/testimonials";
 export const metadata: Metadata = {
   title: "Guest Reviews | Metro Club Resort Near Coimbatore",
   description:
-    "Read Google and TripAdvisor reviews from families, couples, and corporate teams who stayed and celebrated at Metro Club Resort, Sultanpet, Coimbatore.",
+    "Read verified Google guest reviews from families, couples, and corporate teams who stayed and celebrated at Metro Club Resort, Sultanpet, Coimbatore.",
 };
 
 // We will use the about1 image link for hero

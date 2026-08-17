@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import {
   MapPin,
   Phone,
-  MessageCircle,
   Mail,
   Navigation,
   Clock,
@@ -12,6 +11,7 @@ import {
   ChevronDown,
   ChevronUp,
 } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { resortInfo } from "@/data/resortInfo";
 import { roomsData } from "@/data/rooms";
 import { createWhatsAppUrl, DISPLAY_PHONE } from "@/lib/whatsapp";
@@ -21,7 +21,7 @@ export default function ContactPage() {
   const [checkIn, setCheckIn] = useState("");
   const [checkOut, setCheckOut] = useState("");
   const [guests, setGuests] = useState("2 Adults");
-  const [roomType, setRoomType] = useState("Deluxe Double Room");
+  const [roomType, setRoomType] = useState("Deluxe Room");
   const [notes, setNotes] = useState("");
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
@@ -63,7 +63,7 @@ Please share availability and payment details. Thank you!`;
           <div className="bg-white p-8 rounded-3xl border border-[#E8E3D9] shadow-sm flex flex-col justify-between">
             <div>
               <div className="w-12 h-12 rounded-2xl bg-[#fef3d6] flex items-center justify-center text-[#D48C00] mb-4">
-                <MessageCircle className="w-6 h-6 fill-current" />
+                <WhatsAppIcon className="w-6 h-6 fill-current" />
               </div>
               <h3 className="text-xl font-serif font-bold text-[#1B4332] mb-1">WhatsApp Bookings</h3>
               <p className="text-xs text-[#5e6660] mb-4">Fastest response for rates & instant reservation confirmation.</p>
@@ -221,7 +221,7 @@ Please share availability and payment details. Thank you!`;
                 type="submit"
                 className="w-full flex items-center justify-center space-x-2 text-sm font-sans font-bold uppercase tracking-[0.1em] bg-[#D48C00] hover:bg-[#b87900] text-[#1B4332] py-4 px-6 rounded-xl shadow-lg hover:scale-[1.01] transition-all"
               >
-                <MessageCircle className="w-5 h-5 fill-current" />
+                <WhatsAppIcon className="w-5 h-5 fill-current" />
                 <span>Send via WhatsApp</span>
               </button>
             </form>

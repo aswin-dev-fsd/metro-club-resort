@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  MessageCircle,
   Phone,
   Compass,
   Star,
@@ -10,12 +9,12 @@ import {
   Wifi,
   Car,
   Coffee,
-  Clock,
   ArrowRight,
   ShieldCheck,
   MapPin,
   Sparkles,
 } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { RoomCard } from "@/components/ui/RoomCard";
 import { AmenityCard } from "@/components/ui/AmenityCard";
@@ -70,7 +69,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 text-sm font-sans font-bold uppercase tracking-[0.1em] bg-[#D48C00] hover:bg-[#b87900] text-[#1B4332] px-8 py-4 rounded-xl shadow-xl hover:scale-105 transition-all"
             >
-              <MessageCircle className="w-5 h-5 fill-current" />
+              <WhatsAppIcon className="w-5 h-5 fill-current" />
               <span>Book via WhatsApp</span>
             </a>
 
@@ -121,11 +120,11 @@ export default function HomePage() {
 
             <div className="flex items-center space-x-3.5">
               <div className="w-10 h-10 rounded-lg bg-[#D48C00]/20 border border-[#D48C00]/40 flex items-center justify-center text-[#D48C00] shrink-0">
-                <Clock className="w-5 h-5" />
+                <ShieldCheck className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="text-sm font-bold font-sans">24/7 Front Desk</h4>
-                <p className="text-xs text-neutral-300">Warm attentive care</p>
+                <h4 className="text-sm font-bold font-sans">24/7 Surveillance</h4>
+                <p className="text-xs text-neutral-300">Safe & secure campus</p>
               </div>
             </div>
           </div>
@@ -159,7 +158,7 @@ export default function HomePage() {
                   "{resortInfo.officialTestimonial.quote.slice(0, 75)}..."
                 </p>
                 <span className="block text-[10px] text-[#5e6660] font-sans mt-1">
-                  — {resortInfo.officialTestimonial.author} (TripAdvisor)
+                  — {resortInfo.officialTestimonial.author} (Google)
                 </span>
               </div>
             </div>
@@ -173,7 +172,7 @@ export default function HomePage() {
                 A Peaceful Haven with Active Lifestyle Adventures.
               </h2>
               <p className="text-base md:text-lg text-[#5e6660] leading-relaxed mb-6">
-                Metro Club Resort combines a tranquil, picturesque atmosphere with premium modern amenities and warm, attentive hospitality. Serving as an ideal staycation destination for families, social gatherings, and business travelers attending events at Codissia, our resort balances peaceful relaxation with active recreation.
+                Metro Club Resort combines a tranquil, picturesque atmosphere with premium modern amenities and warm, attentive hospitality. Serving as an ideal staycation destination for families, social gatherings, and business travelers attending events around Coimbatore, our resort balances peaceful relaxation with active recreation.
               </p>
 
               {/* Stats Grid */}

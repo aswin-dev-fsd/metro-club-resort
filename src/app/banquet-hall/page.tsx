@@ -10,17 +10,17 @@ import { IMAGES } from "@/data/packages";
 export const metadata: Metadata = {
   title: "Banquet Hall Coimbatore | AC Wedding & Event Hall | Metro Club Resort",
   description:
-    "An elegant air-conditioned banquet hall near Coimbatore for weddings, receptions, engagements, corporate events, and celebrations — seating up to 500 guests.",
+    "An elegant air-conditioned banquet hall near Coimbatore for weddings, receptions, engagements, corporate events, and celebrations — seating up to 270 guests.",
 };
 
 const FEATURES = [
-  "Seating for up to 500 guests",
+  "Seating for up to 270 guests",
   "Stage, backdrop, and grand lighting",
-  "Projector, screen, and sound system",
+  "Sound system",
   "Air-conditioned interiors",
   "Multi-cuisine in-house catering",
   "Bridal & green rooms",
-  "Valet and bus parking",
+  "Ample parking space",
   "On-site guest accommodation",
 ];
 

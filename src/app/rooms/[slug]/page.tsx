@@ -7,13 +7,13 @@ import {
   Users,
   Maximize,
   Check,
-  MessageCircle,
   Phone,
   ArrowLeft,
   Bed,
   Sparkles,
   ShieldCheck,
 } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { roomsData, Room } from "@/data/rooms";
 import { createWhatsAppUrl, DISPLAY_PHONE } from "@/lib/whatsapp";
 
@@ -111,7 +111,7 @@ export default async function RoomDetailPage({ params }: RoomDetailPageProps) {
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 text-xs font-sans font-bold uppercase tracking-[0.08em] bg-[#D48C00] hover:bg-[#b87900] text-[#1B4332] px-4 py-3 rounded-xl shadow transition-all"
             >
-              <MessageCircle className="w-4 h-4 fill-current" />
+              <WhatsAppIcon className="w-4 h-4 fill-current" />
               <span>Book via WhatsApp</span>
             </a>
           </div>
@@ -236,7 +236,7 @@ export default async function RoomDetailPage({ params }: RoomDetailPageProps) {
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center space-x-2 text-sm font-sans font-bold uppercase tracking-[0.1em] bg-[#D48C00] hover:bg-[#b87900] text-[#1B4332] py-4 px-6 rounded-xl shadow-lg transition-all text-center mb-3"
               >
-                <MessageCircle className="w-5 h-5 fill-current" />
+                <WhatsAppIcon className="w-5 h-5 fill-current" />
                 <span>Book via WhatsApp Now</span>
               </a>
 

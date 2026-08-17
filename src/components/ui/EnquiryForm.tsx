@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { MessageCircle } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { cn } from "@/lib/utils";
 import { resortInfo } from "@/data/resortInfo";
 
@@ -222,7 +222,7 @@ export function EnquiryForm({ defaultInterest }: EnquiryFormProps) {
           type="submit"
           className="w-full flex items-center justify-center gap-2 bg-[#D48C00] hover:bg-[#b87900] text-[#1B4332] font-bold uppercase tracking-wider py-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-sm mt-6 cursor-pointer"
         >
-          <MessageCircle className="h-5 w-5 fill-current" />
+          <WhatsAppIcon className="h-5 w-5 fill-current" />
           Send Enquiry via WhatsApp
         </button>
 

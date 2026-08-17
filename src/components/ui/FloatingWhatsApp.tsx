@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { MessageCircle } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { createWhatsAppUrl } from "@/lib/whatsapp";
 
 export function FloatingWhatsApp() {
@@ -18,7 +18,7 @@ export function FloatingWhatsApp() {
         aria-label="Direct WhatsApp Booking Chat with Metro Club Resort"
         className="flex items-center space-x-2 bg-[#25D366] hover:bg-[#20ba5a] text-white px-4 py-3 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 border-2 border-white/30"
       >
-        <MessageCircle className="w-6 h-6 fill-current animate-bounce" />
+        <WhatsAppIcon className="w-6 h-6 fill-current animate-bounce" />
         <span className="hidden sm:inline font-sans font-bold text-sm tracking-wide">
           Book on WhatsApp
         </span>

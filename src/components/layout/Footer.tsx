@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { Phone, MessageCircle, Mail, MapPin, Navigation, Sparkles } from "lucide-react";
+import { Phone, Mail, MapPin, Navigation, Sparkles } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { resortInfo } from "@/data/resortInfo";
 import { roomsData } from "@/data/rooms";
 import { createWhatsAppUrl } from "@/lib/whatsapp";
@@ -36,7 +37,7 @@ export function Footer() {
                 className="w-9 h-9 rounded-full bg-[#D48C00] text-[#1B4332] flex items-center justify-center hover:scale-110 transition-transform"
                 aria-label="WhatsApp"
               >
-                <MessageCircle className="w-5 h-5 fill-current" />
+                <WhatsAppIcon className="w-5 h-5 fill-current" />
               </a>
               <a
                 href={`tel:${resortInfo.phoneRaw}`}
@@ -162,7 +163,7 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex items-center space-x-2.5">
-                <MessageCircle className="w-4 h-4 text-[#D48C00] shrink-0" />
+                <WhatsAppIcon className="w-4 h-4 text-[#D48C00] shrink-0" />
                 <a
                   href={createWhatsAppUrl("Hello Metro Club Resort, I have a booking enquiry.")}
                   target="_blank"

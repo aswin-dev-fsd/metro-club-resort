@@ -3,7 +3,8 @@ import { Metadata } from "next";
 import { RoomCard } from "@/components/ui/RoomCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { roomsData } from "@/data/rooms";
-import { Check, Sparkles, MessageCircle, ShieldCheck } from "lucide-react";
+import { Check, Sparkles, ShieldCheck } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { createWhatsAppUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
@@ -102,7 +103,7 @@ export default function RoomsPage() {
                 ✓
               </span>
               <span className="text-sm font-semibold text-[#1B4332]">
-                24/7 Front Desk & Concierge
+                24/7 Security & Surveillance
               </span>
             </div>
           </div>
@@ -126,7 +127,7 @@ export default function RoomsPage() {
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 text-sm font-sans font-bold uppercase tracking-[0.1em] bg-[#D48C00] hover:bg-[#b87900] text-[#1B4332] px-8 py-3.5 rounded-xl shadow-lg transition-all"
           >
-            <MessageCircle className="w-5 h-5 fill-current" />
+            <WhatsAppIcon className="w-5 h-5 fill-current" />
             <span>Chat for Group Packages</span>
           </a>
         </div>

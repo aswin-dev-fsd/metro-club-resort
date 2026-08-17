@@ -8,17 +8,16 @@ import { IMAGES } from "@/data/packages";
 export const metadata: Metadata = {
   title: "Outdoor Lawn Venue Near Coimbatore | Garden Wedding & Events | Metro Club Resort",
   description:
-    "A lush open-air lawn near Coimbatore for receptions, wedding functions, haldi, sangeet, outdoor birthdays, and night events at Metro Club Resort.",
+    "A lush open-air lawn near Coimbatore for receptions, destination weddings, haldi, sangeet, annual days, and corporate award functions at Metro Club Resort.",
 };
 
 const USES = [
   { t: "Garden Celebrations", d: "Open-air gatherings surrounded by greenery and soft lighting." },
   { t: "Reception", d: "Grand outdoor receptions with stage, lighting, and live food counters." },
-  { t: "Wedding Functions", d: "Muhurtham, nichayathartham, and full wedding-day setups." },
+  { t: "Destination Weddings", d: "Picturesque open-air destination weddings, muhurtham, and complete wedding-day setups." },
   { t: "Haldi", d: "Daylight, marigolds, and water access — the ideal haldi venue." },
   { t: "Sangeet", d: "Open dance floor, full sound system, and dinner served under the stars." },
-  { t: "Outdoor Birthday", d: "Room to run for kids, shaded comfortable seating for everyone else." },
-  { t: "Night Events", d: "Ambient fairy-lights and sound setups for evening and late-night functions." },
+  { t: "Annual Days & Corporate Award Functions", d: "Grand outdoor stage, award ceremonies, and team celebrations on lush green lawns." },
 ];
 
 export default function OutdoorLawnPage() {

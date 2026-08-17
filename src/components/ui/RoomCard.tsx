@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Users, Maximize, ArrowRight, MessageCircle, Bed } from "lucide-react";
+import { Users, Maximize, ArrowRight, Bed } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { Room } from "@/data/rooms";
 import { createWhatsAppUrl } from "@/lib/whatsapp";
 
@@ -89,7 +90,7 @@ export function RoomCard({ room }: RoomCardProps) {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center space-x-1.5 text-xs font-sans font-bold uppercase tracking-[0.08em] bg-[#D48C00] hover:bg-[#b87900] text-[#1B4332] py-2.5 px-3 rounded-lg shadow-sm hover:shadow transition-all text-center"
           >
-            <MessageCircle className="w-3.5 h-3.5 fill-current" />
+            <WhatsAppIcon className="w-3.5 h-3.5 fill-current" />
             <span>Book Now</span>
           </a>
         </div>
