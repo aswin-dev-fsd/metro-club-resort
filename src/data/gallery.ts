@@ -8,21 +8,21 @@ export interface GalleryItem {
 export const galleryData: GalleryItem[] = [
   {
     id: "g-1",
-    title: "Luxury Room Comfort",
+    title: "Deluxe Room Comfort",
     category: "Rooms",
-    image: "https://metroclubresort.in/wp-content/uploads/2025/11/4-1-scaled.jpg",
+    image: "/images/rooms/deluxe/deluxe-room-bed-main.webp",
   },
   {
     id: "g-2",
-    title: "Resort Lawn & Surroundings",
+    title: "Lush Destination Wedding Lawn",
     category: "Activities",
-    image: "https://metroclubresort.in/wp-content/uploads/2025/05/img-1.jpg",
+    image: "/images/amenities/destination-wedding-lawn.webp",
   },
   {
     id: "g-3",
     title: "Balcony Room View",
     category: "Rooms",
-    image: "https://metroclubresort.in/wp-content/uploads/2025/05/3-3.jpg",
+    image: "/images/rooms/deluxe-balcony/deluxe-balcony-primary.webp",
   },
   {
     id: "g-4",
@@ -52,13 +52,13 @@ export const galleryData: GalleryItem[] = [
     id: "g-8",
     title: "Multi-Cuisine Dining",
     category: "Dining & Events",
-    image: "https://metroclubresort.in/wp-content/uploads/elementor/thumbs/Restaurant-rjmizwxy5mqqophahlto01cxjzukbebt0yphv4w03s.jpg",
+    image: "/images/amenities/multi-cuisine-restaurant.webp",
   },
   {
     id: "g-9",
-    title: "Grand Banquet Setup",
+    title: "Grand Banquet & Conference Hall",
     category: "Dining & Events",
-    image: "https://metroclubresort.in/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2025-11-18-at-2.28.40-PM-rjmizwxy5mqqophahlto01cxjzukbebt0yphv4w03s.jpeg",
+    image: "/images/amenities/conference-hall.webp",
   },
   {
     id: "g-10",
@@ -68,14 +68,38 @@ export const galleryData: GalleryItem[] = [
   },
   {
     id: "g-11",
-    title: "Indoor Games & Activities",
+    title: "Indoor Games Arena",
     category: "Activities",
-    image: "https://metroclubresort.in/wp-content/uploads/2025/05/10.jpg",
+    image: "/images/amenities/indoor-games-arena.webp",
   },
   {
     id: "g-12",
     title: "Kids Play Zone",
     category: "Activities",
     image: "https://metroclubresort.in/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2025-11-18-at-2.28.52-PM-rjmizxvscgs10bfxc48akj4e5dpxj3fjd3czceulxk.jpeg",
+  },
+  {
+    id: "g-13",
+    title: "Corporate Day Out Gatherings",
+    category: "Activities",
+    image: "/images/packages/corporate-day-out.webp",
+  },
+  {
+    id: "g-14",
+    title: "Grand Reception & Party Lawns",
+    category: "Dining & Events",
+    image: "/images/packages/grand-reception-lawn.webp",
+  },
+  {
+    id: "g-15",
+    title: "Standard Room Comfort",
+    category: "Rooms",
+    image: "/images/rooms/standard/standard-room-primary.webp",
+  },
+  {
+    id: "g-16",
+    title: "Zen Buddha Garden Courtyard",
+    category: "Activities",
+    image: "/images/rooms/standard/standard-room-garden-courtyard.webp",
   },
 ];

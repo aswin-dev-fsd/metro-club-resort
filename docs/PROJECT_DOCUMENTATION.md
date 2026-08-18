@@ -3,7 +3,7 @@
 > **Project:** Full-stack resort website redesign & rebuild  
 > **Client:** Metro Club Resort, Sultanpet, Coimbatore, Tamil Nadu  
 > **Tech Stack:** Next.js 16 · React 19 · TypeScript · Tailwind CSS v4  
-> **Status:** Build verified · 15/15 static pages · Zero errors  
+> **Status:** Build verified · 40/40 static pages · Zero errors  
 > **Last Updated:** August 2026
 
 ---
@@ -15,15 +15,15 @@
 3. [Project Directory Structure](#3-project-directory-structure)
 4. [Brand Identity & Design System](#4-brand-identity--design-system)
 5. [Data Layer](#5-data-layer)
-6. [Component Library](#6-component-library)
-7. [Page Architecture](#7-page-architecture)
-8. [SEO & Structured Data](#8-seo--structured-data)
-9. [WhatsApp CRO Integration](#9-whatsapp-cro-integration)
-10. [Responsive Design Strategy](#10-responsive-design-strategy)
-11. [Configuration Files](#11-configuration-files)
-12. [Workspace Rules & Coding Standards](#12-workspace-rules--coding-standards)
-13. [GitHub Deployment Guide](#13-github-deployment-guide)
-14. [Vercel Deployment Guide](#14-vercel-deployment-guide)
+6. [Media & Image Optimization Pipeline](#6-media--image-optimization-pipeline)
+7. [Component Library](#7-component-library)
+8. [Page Architecture (40 Routes)](#8-page-architecture-40-routes)
+9. [SEO & Structured Data](#9-seo--structured-data)
+10. [WhatsApp CRO Integration](#10-whatsapp-cro-integration)
+11. [Responsive Design Strategy](#11-responsive-design-strategy)
+12. [Configuration Files](#12-configuration-files)
+13. [Workspace Rules & Coding Standards](#13-workspace-rules--coding-standards)
+14. [GitHub & Vercel Deployment Guides](#14-github--vercel-deployment-guides)
 15. [Future Roadmap & Planned Improvements](#15-future-roadmap--planned-improvements)
 
 ---
@@ -32,21 +32,22 @@
 
 ### What Was Built
 
-Metro Club Resort's existing WordPress website was fully redesigned and rebuilt from scratch as a high-performance, SEO-optimised, conversion-focused Next.js web application. The goal was to create a premium digital presence that reflects the resort's brand identity (based on official Brand PDF guidelines), drives WhatsApp enquiries, and delivers instant page loads on all devices.
+Metro Club Resort's website was fully redesigned and rebuilt from scratch as a high-performance, SEO-optimised, conversion-focused Next.js web application. The platform spans 40 static pre-rendered routes covering accommodations, event venues, day-out packages, 16 individual celebration formats, and direct WhatsApp reservation flows.
 
 ### Business Goals Achieved
 
 | Goal | Implementation |
 |---|---|
-| Instant page loads | 100% static pre-rendering (SSG) — no server wait |
+| Instant page loads | 100% static pre-rendering (SSG with Turbopack) — no server wait |
 | Higher WhatsApp conversions | Every CTA deep-links with pre-filled booking message |
 | Mobile-first guest experience | Responsive layouts, touch menus, native tel: links |
-| SEO-ready from day 1 | JSON-LD schema, sitemap.xml, robots.txt, Open Graph |
+| SEO-ready from day 1 | JSON-LD schema, sitemap.xml indexing 40 URLs, robots.txt, Open Graph |
 | Brand consistency | PDF-compliant color ratios, typography, spacing enforced |
+| Self-contained media assets | 28 local WebP assets (5.7 MB total, 99.2% compression from 720 MB raw DSLR sources) |
 | Zero vendor lock-in | Standard Next.js — deployable anywhere (Vercel, AWS, Hostinger, cPanel) |
 
-### Live Reference Used During Development
-Temporary image assets were referenced from `https://metroclubresort.in/wp-content/uploads/` (existing WordPress uploads). The `next.config.ts` is configured to allow these as remote image sources, and the architecture is ready for migration to any CDN or local asset store.
+### Media Architecture & Local Asset Hosting
+The website utilizes a local WebP asset pipeline located in `public/images/`. Raw DSLR photography (61-Megapixel exports) was compressed and converted to responsive WebP format using `sharp` (quality 82, auto-orientation, max width 1920px). A repeatable processing script `scripts/process-images.js` is provided in the repository.
 
 ---
 
@@ -61,27 +62,13 @@ Temporary image assets were referenced from `https://metroclubresort.in/wp-conte
 | **TypeScript** | 5.x | Type-safe development |
 | **Tailwind CSS** | 4.x | Utility-first responsive styling |
 | **Tailwind PostCSS** | 4.x | Build pipeline integration |
+| **Sharp** | 0.35.x | High-performance image processing & WebP optimization |
 
 ### UI & Icon Libraries
 
 | Package | Version | Purpose |
 |---|---|---|
 | **lucide-react** | 1.31.0 | Premium icon system (Phone, MapPin, Menu, etc.) |
-
-### Build Tooling
-
-| Tool | Purpose |
-|---|---|
-| **Turbopack** | Next.js 16 default bundler (20x faster than Webpack) |
-| **ESLint 9** | Code quality linting with Next.js config |
-| **TypeScript strict** | Full type checking on build |
-
-### Why This Stack?
-
-- **Next.js App Router** allows mixing Server Components (fast, SEO-crawlable) with Client Components (interactive) on a per-component basis.
-- **Tailwind CSS v4** uses native CSS variables internally, eliminating the build-time config file and improving performance.
-- **Turbopack** compiles code on-demand in dev mode but produces fully pre-built static HTML in production — meaning zero compilation delays for real visitors.
-- **TypeScript** catches bugs at compile time rather than at runtime in production.
 
 ---
 
@@ -90,63 +77,47 @@ Temporary image assets were referenced from `https://metroclubresort.in/wp-conte
 ```
 d:\Aswin\Projects\Metro_Club_Resort\
 │
-├── .agents/                          # Antigravity AI workspace rules
+├── .agents/                          # Antigravity AI workspace rules & brand guides
 │   ├── AGENTS.md                     # Engineering standards & brand rules
 │   └── rules/
-│       └── ask.md                    # Read-only consultation mode trigger
 │
 ├── docs/                             # Full technical documentation
 │   └── PROJECT_DOCUMENTATION.md      # Architecture, specs & deployment
 │
 ├── public/                           # Static assets served at root URL
-│   └── (favicon, og-image, etc.)
+│   └── images/                       # Self-contained WebP image library
+│       ├── amenities/                # Conference, Lawn, Restaurant, Games
+│       ├── packages/                 # Corporate, Friends, College, Lawns
+│       └── rooms/                    # Deluxe, Balcony, Standard
+│
+├── scripts/
+│   └── process-images.js             # Batch image optimization script
 │
 ├── src/
-│   ├── app/                          # Next.js App Router — all pages live here
+│   ├── app/                          # Next.js App Router — 40 static routes
 │   │   ├── layout.tsx                # Root layout: metadata, fonts, Navbar, Footer
 │   │   ├── globals.css               # Brand CSS variables & base typography
 │   │   ├── page.tsx                  # Home page (/)
 │   │   ├── robots.ts                 # /robots.txt — crawling rules
-│   │   ├── sitemap.ts                # /sitemap.xml — search engine map
-│   │   ├── about/
-│   │   │   └── page.tsx              # /about
-│   │   ├── rooms/
-│   │   │   ├── page.tsx              # /rooms — all rooms listing
-│   │   │   └── [slug]/
-│   │   │       └── page.tsx          # /rooms/[slug] — individual room detail
-│   │   ├── amenities/
-│   │   │   └── page.tsx              # /amenities
-│   │   ├── gallery/
-│   │   │   └── page.tsx              # /gallery — filterable photo gallery
-│   │   └── contact/
-│   │       └── page.tsx              # /contact — enquiry form + FAQ
+│   │   ├── sitemap.ts                # /sitemap.xml — dynamic 40-URL sitemap
+│   │   ├── about/                    # /about
+│   │   ├── rooms/                    # /rooms & /rooms/[slug] (4 pre-rendered)
+│   │   ├── amenities/                # /amenities
+│   │   ├── banquet-hall/             # /banquet-hall
+│   │   ├── outdoor-lawn/             # /outdoor-lawn
+│   │   ├── corporate/                # /corporate
+│   │   ├── day-out-packages/         # /day-out-packages
+│   │   ├── celebrations/             # /celebrations & /celebrations/[slug] (16 pre-rendered)
+│   │   ├── gallery/                  # /gallery — 16 high-res categorized scenes
+│   │   ├── testimonials/             # /testimonials
+│   │   ├── weather/                  # /weather
+│   │   ├── nearby-attractions/       # /nearby-attractions
+│   │   ├── faqs/                     # /faqs
+│   │   └── contact/                  # /contact — enquiry form + map
 │   │
-│   ├── components/
-│   │   ├── layout/
-│   │   │   ├── Navbar.tsx            # Fixed, page-aware navigation bar
-│   │   │   └── Footer.tsx            # Site-wide footer
-│   │   ├── ui/
-│   │   │   ├── RoomCard.tsx          # Room listing card with WhatsApp CTA
-│   │   │   ├── AmenityCard.tsx       # Amenity display card
-│   │   │   ├── SectionHeading.tsx    # Dual-font section heading component
-│   │   │   └── FloatingWhatsApp.tsx  # Persistent floating WhatsApp button
-│   │   └── seo/
-│   │       └── JsonLd.tsx            # Server-rendered schema.org JSON-LD
-│   │
-│   ├── data/                         # Content layer — separated from UI
-│   │   ├── rooms.ts                  # All 4 room types with full specs
-│   │   ├── amenities.ts              # All 10 resort amenities
-│   │   ├── gallery.ts                # 12 categorised gallery images
-│   │   └── resortInfo.ts             # Contact, FAQs, stats, testimonials
-│   │
-│   └── lib/
-│       └── whatsapp.ts               # WhatsApp URL builder utility
-│
-├── next.config.ts                    # Next.js config: image domains
-├── tsconfig.json                     # TypeScript configuration
-├── package.json                      # Dependencies & scripts
-├── postcss.config.mjs                # PostCSS + Tailwind build pipeline
-└── eslint.config.mjs                 # Linting rules
+│   ├── components/                   # Reusable UI, Layout, and SEO components
+│   ├── data/                         # Content layer (rooms, packages, amenities, gallery)
+│   └── lib/                          # Utilities (WhatsApp URL builder)
 ```
 
 ---

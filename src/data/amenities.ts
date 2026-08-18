@@ -56,7 +56,7 @@ export const amenitiesData: Amenity[] = [
     tagline: "Table tennis, carrom, chess & board games for all ages",
     description:
       "Enjoy a lively selection of indoor games including table tennis, carrom, chess, board games, and group recreation—perfect for unwinding with friends and family during warm afternoons.",
-    image: "https://metroclubresort.in/wp-content/uploads/2025/05/10.jpg",
+    image: "/images/amenities/indoor-games-arena.webp",
     highlight: true,
   },
   {
@@ -66,7 +66,7 @@ export const amenitiesData: Amenity[] = [
     tagline: "Equipped setup for corporate meetings, workshops & presentations",
     description:
       "Host seamless business conferences, corporate retreats, team strategy sessions, and workshops with dedicated projector, audio-visual system, high-speed Wi-Fi, and customizable executive seating.",
-    image: "https://metroclubresort.in/wp-content/uploads/2025/05/about-2.jpg",
+    image: "/images/amenities/conference-hall.webp",
     highlight: true,
   },
   {
@@ -76,7 +76,7 @@ export const amenitiesData: Amenity[] = [
     tagline: "Expansive natural greenery for picnics & open-air functions",
     description:
       "Relax or celebrate on our lush outdoor lawn—ideal for picnics, evening strolls, social gatherings, or simply soaking in nature’s charm with your loved ones in a peaceful green setting.",
-    image: "https://metroclubresort.in/wp-content/uploads/elementor/thumbs/Outdoor-Lawn-rjmizwxy5mqqophahlto01cxjzukbebt0yphv4w03s.jpg",
+    image: "/images/amenities/destination-wedding-lawn.webp",
   },
   {
     id: "banquet-hall",
@@ -85,7 +85,7 @@ export const amenitiesData: Amenity[] = [
     tagline: "Spacious venue for weddings, reunions & corporate events",
     description:
       "Host unforgettable celebrations in our elegant banquet hall—perfect for weddings, birthdays, family reunions, or corporate events with spacious seating, stage lighting, and refined ambiance.",
-    image: "https://metroclubresort.in/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2025-11-18-at-2.28.40-PM-rjmizwxy5mqqophahlto01cxjzukbebt0yphv4w03s.jpeg",
+    image: "/images/packages/grand-reception-lawn.webp",
     highlight: true,
   },
   {
@@ -95,7 +95,7 @@ export const amenitiesData: Amenity[] = [
     tagline: "Delightful regional & multi-cuisine culinary journeys",
     description:
       "Savor a delightful culinary journey at our multi-cuisine restaurant—perfect for food lovers craving authentic South Indian flavors, rich tandoori dishes, and fresh chef-crafted meals.",
-    image: "https://metroclubresort.in/wp-content/uploads/elementor/thumbs/Restaurant-rjmizwxy5mqqophahlto01cxjzukbebt0yphv4w03s.jpg",
+    image: "/images/amenities/multi-cuisine-restaurant.webp",
     highlight: true,
   },
   {

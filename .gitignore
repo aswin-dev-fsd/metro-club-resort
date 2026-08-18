@@ -23,6 +23,7 @@
 # agent workspace config & scratch files
 .agents/
 temp/
+scripts/
 *.tmp
 *.log
 CLAUDE.md

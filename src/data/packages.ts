@@ -1,12 +1,18 @@
 export const IMAGES = {
   pool: "https://metroclubresort.in/wp-content/uploads/elementor/thumbs/4-1-scaled-rjmizxvscgs10bfxc48akj4e5dpxj3fjd3czceulxk.jpg",
   rainDance: "https://metroclubresort.in/wp-content/uploads/elementor/thumbs/Rain-Dance-with-Music-rjmizwxy5mqqophahlto01cxjzukbebt0yphv4w03s.jpg",
-  banquet: "https://metroclubresort.in/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2025-11-18-at-2.28.40-PM-rjmizwxy5mqqophahlto01cxjzukbebt0yphv4w03s.jpeg",
-  lawn: "https://metroclubresort.in/wp-content/uploads/elementor/thumbs/Outdoor-Lawn-rjmizwxy5mqqophahlto01cxjzukbebt0yphv4w03s.jpg",
-  restaurant: "https://metroclubresort.in/wp-content/uploads/elementor/thumbs/Restaurant-rjmizwxy5mqqophahlto01cxjzukbebt0yphv4w03s.jpg",
+  banquet: "/images/amenities/conference-hall.webp",
+  lawn: "/images/amenities/destination-wedding-lawn.webp",
+  restaurant: "/images/amenities/multi-cuisine-restaurant.webp",
   turf: "https://metroclubresort.in/wp-content/uploads/elementor/thumbs/9-scaled-rjmizxvscgs10bfxc48akj4e5dpxj3fjd3czceulxk.jpg",
   campfire: "https://metroclubresort.in/wp-content/uploads/elementor/thumbs/1-2-rjmizwxy5mqqophahlto01cxjzukbebt0yphv4w03s.jpg",
   kids: "https://metroclubresort.in/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2025-11-18-at-2.28.52-PM-rjmizxvscgs10bfxc48akj4e5dpxj3fjd3czceulxk.jpeg",
+  corporateDayOut: "/images/packages/corporate-day-out.webp",
+  corporateStay: "/images/packages/corporate-stay.webp",
+  friendsDayOut: "/images/packages/friends-day-out.webp",
+  collegeDayOut: "/images/packages/college-day-out.webp",
+  receptionLawn: "/images/packages/grand-reception-lawn.webp",
+  outdoorLawn: "/images/packages/outdoor-green-lawn.webp",
 };
 
 export const CORPORATE_DAY_OUT = [
@@ -73,13 +79,13 @@ export const DAY_OUT_PACKAGES: DayOutPackage[] = [
   {
     name: "Corporate Day Out",
     subtitle: "Team building, minus the awkwardness",
-    image: IMAGES.turf,
+    image: IMAGES.corporateDayOut,
     inclusions: [...BASE_INCLUSIONS, "Team Building Activities", "Conference Setup", "Turf"],
   },
   {
     name: "Friends Package",
     subtitle: "Turf in the morning, campfire at night",
-    image: IMAGES.campfire,
+    image: IMAGES.friendsDayOut,
     inclusions: [...BASE_INCLUSIONS, "Turf", "Music & DJ", "Campfire (add-on)"],
   },
   {
@@ -91,13 +97,13 @@ export const DAY_OUT_PACKAGES: DayOutPackage[] = [
   {
     name: "College Package",
     subtitle: "Big groups, big day",
-    image: IMAGES.rainDance,
+    image: IMAGES.collegeDayOut,
     inclusions: [...BASE_INCLUSIONS, "DJ & Sound", "Turf"],
   },
   {
     name: "Photoshoot Package",
     subtitle: "Pre-wedding, fashion & portfolio shoots",
-    image: IMAGES.restaurant,
+    image: IMAGES.lawn,
     description:
       "A picturesque countryside destination for pre-wedding, post-wedding, fashion, and portfolio photoshoots. Enjoy full access to scenic lush green lawns, swimming pool backdrops, rustic aesthetic zones, and private changing rooms for a smooth, creative shoot day.",
   },

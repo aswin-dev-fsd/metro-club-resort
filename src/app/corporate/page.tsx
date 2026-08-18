@@ -62,13 +62,13 @@ export default function CorporatePage() {
             title="Corporate Day Out"
             subtitle="One full day, start to sunset"
             items={CORPORATE_DAY_OUT}
-            image={IMAGES.rainDance}
+            image={IMAGES.corporateDayOut}
           />
           <CorporatePackage
             title="Corporate Stay"
             subtitle="Overnight offsites with conference and campfire"
             items={CORPORATE_STAY}
-            image={IMAGES.campfire}
+            image={IMAGES.corporateStay}
           />
         </div>
         <div className="mt-12 text-center">
