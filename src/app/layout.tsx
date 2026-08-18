@@ -56,6 +56,14 @@ export const metadata: Metadata = {
       "A perfect retreat for family and friends in Sultanpet, Coimbatore. Luxury rooms, swimming pool, and sports turf.",
     images: ["https://metroclubresort.in/wp-content/uploads/2025/11/4-1-scaled.jpg"],
   },
+  icons: {
+    icon: [
+      { url: "/images/logo/logo-emblem.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/logo/logo-emblem.png", sizes: "192x192", type: "image/png" },
+    ],
+    shortcut: "/images/logo/logo-emblem.png",
+    apple: "/images/logo/logo-emblem.png",
+  },
   robots: {
     index: true,
     follow: true,

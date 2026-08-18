@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Navigation, Sparkles } from "lucide-react";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { resortInfo } from "@/data/resortInfo";
@@ -13,18 +14,16 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Col 1: Brand & Bio */}
           <div>
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-[#D48C00] flex items-center justify-center text-[#1B4332] font-serif font-bold text-xl">
-                M
-              </div>
-              <div>
-                <span className="block text-xl font-serif font-bold tracking-tight text-white">
-                  METRO CLUB
-                </span>
-                <span className="block text-[10px] tracking-[0.2em] uppercase text-[#D48C00] font-sans font-semibold">
-                  Resort • Coimbatore
-                </span>
-              </div>
+            <div className="mb-5">
+              <Link href="/" className="inline-block group">
+                <Image
+                  src="/images/logo/logo-full.png"
+                  alt="Metro Club Resort"
+                  width={220}
+                  height={110}
+                  className="h-20 w-auto object-contain drop-shadow-lg transition-transform group-hover:scale-105"
+                />
+              </Link>
             </div>
             <p className="text-sm text-neutral-300 leading-relaxed mb-6">
               A tranquil, high-end family and active-recreation retreat in Sultanpet, Coimbatore. Combining natural serenity with premium modern hospitality.

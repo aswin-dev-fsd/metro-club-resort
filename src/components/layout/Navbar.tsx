@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Phone, Menu, X } from "lucide-react";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
@@ -55,11 +56,15 @@ export function Navbar() {
         <div className="flex items-center justify-between">
            {/* Logo */}
            <Link href="/" className="group flex items-center space-x-3">
-             {/* Double-ring gold emblem seal */}
-             <div className="flex items-center justify-center w-11 h-11 rounded-full border border-[#D48C00]/40 transition-transform duration-300 group-hover:scale-105">
-               <div className="w-8 h-8 rounded-full bg-[#D48C00] flex items-center justify-center text-[#1B4332] font-serif font-bold text-lg shadow-sm">
-                 M
-               </div>
+             <div className="relative w-11 h-11 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+               <Image
+                 src="/images/logo/logo-emblem.png"
+                 alt="Metro Club Resort Logo"
+                 width={44}
+                 height={44}
+                 className="w-11 h-11 object-contain drop-shadow-md"
+                 priority
+               />
              </div>
              <div>
                <span className="block text-xl md:text-2xl font-serif font-bold tracking-tight text-white group-hover:text-[#D48C00] transition-colors">
